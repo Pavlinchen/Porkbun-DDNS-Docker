@@ -18,7 +18,8 @@ For an in depth explanation on how the API works or how to get started, please c
 version: "3"
 services:
     porkbunddns:
-        image: porkbunddns
+        image: pavlinchen/porkbun-ddns-docker
+        container_name: porkbun-ddns
         environment:
             APIKey: <YourAPIKey>
             SecretAPIKey: <YourSecretAPIKey>
@@ -33,9 +34,10 @@ docker run -d \
 -e APIKey='<YourAPIKey>' \
 -e SecretAPIKey='<YourSecretAPIKey>' \
 -e Domain='<YourDomain>' \
--e Schedule='<YourSchedule (cron syntax)>' \ #optional
--e TZ='<YourTimezone>' \ #optional
-porkbunddns
+-e Schedule='<YourSchedule (cron syntax)>' \
+-e TZ='<YourTimezone>' \
+--name porkbun-ddns \
+pavlinchen/porkbun-ddns-docker
 ```
 
 ### Build from source:
