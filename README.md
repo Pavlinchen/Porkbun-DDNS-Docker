@@ -20,6 +20,8 @@ services:
     porkbunddns:
         image: pavlinchen/porkbun-ddns-docker
         container_name: porkbun-ddns
+        restart: always
+        pull_policy: always
         environment:
             APIKey: <YourAPIKey>
             SecretAPIKey: <YourSecretAPIKey>
@@ -37,6 +39,7 @@ docker run -d \
 -e Schedule='<YourSchedule (cron syntax)>' \
 -e TZ='<YourTimezone>' \
 --pull=always \
+--restart always \
 --name porkbun-ddns \
 pavlinchen/porkbun-ddns-docker
 ```
