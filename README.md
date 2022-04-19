@@ -36,6 +36,7 @@ docker run -d \
 -e Domain='<YourDomain>' \
 -e Schedule='<YourSchedule (cron syntax)>' \
 -e TZ='<YourTimezone>' \
+--pull=always \
 --name porkbun-ddns \
 pavlinchen/porkbun-ddns-docker
 ```
