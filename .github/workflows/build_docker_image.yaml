@@ -6,7 +6,6 @@ on:
     branches: 
       - 'master'
       - 'main'
-      - 'feature_build-docker-image-with-actions'
 
 jobs:
   build:
