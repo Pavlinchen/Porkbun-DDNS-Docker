@@ -1,15 +1,20 @@
 # Adjusted https://github.com/marcel-dempers/docker-development-youtube-series/blob/master/.github/workflows/docker._yaml according to my needs
 name: Build Porkbun-DDNS-Docker
 
-on: [push]
+on: 
+  push:
+    branches: 
+      - 'master'
+      - 'main'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v2
     - name: login to docker
-      with:
+      env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}   
         DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}  
       run: |
