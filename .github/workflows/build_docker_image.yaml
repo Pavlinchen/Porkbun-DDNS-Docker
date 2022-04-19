@@ -25,8 +25,3 @@ jobs:
       run: |
         docker buildx create --name builder_porkbun-ddns --use
         docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6,linux/386 -t pavlinchen/porkbun-ddns-docker --push .
-
-    - name: clean buildx builder
-      run: |
-        docker buildx rm builder_porkbun-ddns
-        docker buildx stop builder_porkbun-ddns
