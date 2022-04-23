@@ -1,6 +1,6 @@
 # Porkbun DDNS Docker
 
-## This is the [Porkbun DDNS Python API](https://github.com/porkbundomains/porkbun-dynamic-dns-python) wrapped into a lightweight, multiplattform [docker image](https://hub.docker.com/r/pavlinchen/porkbun-ddns-docker).
+## This is the [Porkbun DDNS Python API](https://github.com/porkbundomains/porkbun-dynamic-dns-python) wrapped into a lightweight, multiplattform [docker image](https://hub.docker.com/r/pavlinchen/porkbun-ddns).
 
 ### Table of contents:
 1. [Usage](#usage)
@@ -18,7 +18,7 @@ For an in depth explanation on how the API works or how to get started, please c
 version: "3"
 services:
     porkbunddns:
-        image: pavlinchen/porkbun-ddns-docker
+        image: pavlinchen/porkbun-ddns
         container_name: porkbun-ddns
         restart: always
         pull_policy: always
@@ -41,14 +41,14 @@ docker run -d \
 --pull=always \
 --restart always \
 --name porkbun-ddns \
-pavlinchen/porkbun-ddns-docker
+pavlinchen/porkbun-ddns
 ```
 
 ### Build from source:
 ```bash
 git clone https://github.com/Pavlinchen/Porkbun-DDNS-Docker
 cd Porkbun-DDNS-Docker
-docker build . -t porkbunddns
+docker build . -t porkbun-ddns
 ```
 
 ### Environment Variables
