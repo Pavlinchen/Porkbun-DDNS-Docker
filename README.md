@@ -1,6 +1,6 @@
 # Porkbun DDNS Docker
 
-## This is the [Porkbun DDNS Python API](https://github.com/porkbundomains/porkbun-dynamic-dns-python) wrapped into a lightweight docker image.
+## This is the [Porkbun DDNS Python API](https://github.com/porkbundomains/porkbun-dynamic-dns-python) wrapped into a lightweight, multiplattform [docker image](https://hub.docker.com/r/pavlinchen/porkbun-ddns-docker).
 
 ### Table of contents:
 1. [Usage](#usage)
