@@ -20,10 +20,10 @@ def fillCron(DOMAIN, SCHEDULE='*/5 * * * *'):
 
 #try to avoid errors when no schedule is provided
 try:
-    fillCron(   SCHEDULE=os.environ['Schedule'],
+    fillCron(   SCHEDULE=str(os.environ['Schedule']),
                 DOMAIN=str(os.environ['Domain']).replace('*', '"*"'))
 except:
-    fillCron(DOMAIN=os.environ['Domain']).replace('*', '"*"')
+    fillCron(DOMAIN=str(os.environ['Domain']).replace('*', '"*"'))
 
 #declare /porkbun/crontab.txt as crontab file
 os.system("crontab /porkbun/crontab.txt")
