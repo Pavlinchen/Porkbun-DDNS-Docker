@@ -23,7 +23,7 @@ try:
     fillCron(   SCHEDULE=os.environ['Schedule'],
                 DOMAIN=str(os.environ['Domain']).replace('*', '"*"'))
 except:
-    fillCron(DOMAIN=os.environ['Domain']).replace('*', '"*"'))
+    fillCron(DOMAIN=os.environ['Domain']).replace('*', '"*"')
 
 #declare /porkbun/crontab.txt as crontab file
 os.system("crontab /porkbun/crontab.txt")
