@@ -22,5 +22,5 @@ jobs:
         
     - name: build & push docker image
       run: |
-        docker buildx create --name builder_porkbun-ddns --use
-        docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7,linux/386 -t pavlinchen/porkbun-ddns --push .
+        docker buildx create --name builder_porkbun-ddns --use --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6,linux/386
+        docker buildx build -t pavlinchen/porkbun-ddns --push .
