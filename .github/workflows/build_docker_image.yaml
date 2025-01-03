@@ -4,7 +4,6 @@ name: Build & push Porkbun-DDNS-Docker
 on: 
   push:
     branches: 
-      - 'master'
       - 'main'
 
 jobs:
