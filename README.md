@@ -68,5 +68,5 @@ docker build . -t porkbun-ddns
 | `APIKey` | The API key provided to you by porkbun | pk1_abcdef123456 | None | yes
 | `SecretAPIKey` | The secret API key provided to you by porkbun | sk1_abcdef123456 | None | yes
 | `Domain` | The Domain you want to map to your IP adress, as seen [here](https://github.com/porkbundomains/porkbun-dynamic-dns-python#running-the-client)| google.com domains </br> (would be domains.google.com) | None | yes
-| `Schedule` | Schedule to execute the script to sync DNS A records with your IP address in cron syntax | */10 * * * * </br> (every 10 minutes) | */5 * * * * </br> (every 5 minutes) | no
+| `Schedule` | Schedule to execute the script to sync DNS A records with your IP address [in cron syntax](https://en.wikipedia.org/wiki/Cron#Overview) | */10 * * * * </br> (every 10 minutes) | */5 * * * * </br> (every 5 minutes) | no
 | `TZ` | Your Timezone  in [tz database format](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List) name </br> (only really needed, if used in schedule) | Europe/Berlin | UTC | no
