@@ -38,11 +38,11 @@ services:
 
 ```docker
 docker run -d \
--e APIKey='<YourAPIKey>' \
--e SecretAPIKey='<YourSecretAPIKey>' \
--e Domain='<YourDomain>' \
--e Schedule='<YourSchedule (in cron syntax)>' \
--e TZ='<YourTimezone>' \
+-e APIKey="<YourAPIKey>" \
+-e SecretAPIKey="<YourSecretAPIKey>" \
+-e Domain="<YourDomain>" \
+-e Schedule="<YourSchedule (in cron syntax)>" \
+-e TZ="<YourTimezone>" \
 --pull=always \
 --restart always \
 --name porkbun-ddns \
